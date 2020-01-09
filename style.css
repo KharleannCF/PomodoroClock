@@ -1,0 +1,129 @@
+:root{
+	--base:hsl(40, 100%, 60%);
+	--baseosc:hsl(40, 100%, 50%);
+	--baseosc1:hsl(40, 100%, 40%);
+	--baseclara:hsl(40, 100%, 80%);	
+}
+*{
+	background: hsl(160, 100%, 70%);
+}
+
+input{
+	position: relative;
+	left: 5%;
+	width: 90%;
+	height: 5vh;
+	text-align: center;
+	background-color: hsl(300, 50%, 60%);
+	border-style: none;
+	box-shadow: inset 3px 3px 5px hsl(300,50%, 70%), 3px 3px 5px hsl(300,50%, 40%);
+	font-family: 'Raleway', sans-serif;
+	font-size: 2rem;
+}
+input:disabled{
+	color: black;
+}
+p{
+	margin: 0;
+	background: none;
+	margin-top: -1.5vh;
+}
+.contenedor{
+	position: absolute;
+	left: 30vw;
+	top: 25vh;
+	width: 40vw;
+	box-shadow: 0px 0px 10px hsl(45, 100%, 40%);
+	
+}
+.container{
+	width: 100%;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton{
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	border: 0px;
+	text-align: center;
+	border-radius: 100px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-size: 3rem;
+	color: hsl(40, 50%, 20%);
+}
+.caja{
+	box-shadow: inset 3px 3px 5px var(--baseclara), 3px 3px 5px var(--baseosc);
+	text-shadow: -3px -3px 3px var(--baseclara), 2px 2px 3px var(--baseosc);
+	background-color: var(--base);
+	-webkit-transition:0.2s;
+  	-moz-transition:0.2s;
+  	transition:0.2s;
+  	cursor: pointer;
+}
+.caja:active{
+	background-color: var(--baseosc);
+	box-shadow: inset 3px 3px 5px var(--baseosc1), 1px 1px 1px var(--baseclara);
+	text-shadow: -1px -1px 2px var(--baseosc), 2px 2px 2px var(--baseclara);
+}
+
+.fila{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+}
+.reverse{
+	background: none;
+	position: relative;
+	display: inline-flex;
+	align-items: flex-start;
+	justify-content: center;
+	height: 20vh;
+	width: 40vw;
+	margin: 0 auto;
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	transition: transform 0.5s ease;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+}
+.reverse  button {
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.pause, .play {
+	height: 15vh;
+	width: 100%;
+	margin: 0;
+	margin-top: 2vh;
+}
+.play{
+	flex: 1;
+	z-index: 2;
+}
+.pause{
+	flex: 1;
+	transform: rotateY(180deg);
+	align-items: center;
+	vertical-align: middle;
+}
+#revtitulo{
+	width: 40vw;
+}
