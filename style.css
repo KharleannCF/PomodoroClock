@@ -97,9 +97,9 @@ p{
 	-webkit-transform-style:preserve-3d;
 	-moz-transform-style:preserve-3d;
 	transform-style:preserve-3d;
-	transition: transform 0.5s ease;
 	-webkit-transition: transform 0.5s ease;
 	-moz-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 .reverse  button {
 	position: absolute;
@@ -116,10 +116,12 @@ p{
 }
 .play{
 	flex: 1;
-	z-index: 2;
+	z-index: -1;
 }
 .pause{
 	flex: 1;
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
 	transform: rotateY(180deg);
 	align-items: center;
 	vertical-align: middle;
