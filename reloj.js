@@ -84,7 +84,7 @@ function iterador(){
 };
 
 rBut.onclick = function(){
-	rMin = bar.value[0]+bar.value[1];
+	rMin = parseInt(bar.value[0]+bar.value[1]);
 	/:/.test(rMin) ? rMin=rMin.split("").reverse().join("").replace(/:/,"0") : rMin;
 	minAct = wMin;
 	revTil.style.removeProperty("transform");
@@ -93,7 +93,7 @@ rBut.onclick = function(){
 	bar.value = showTime(minAct);
 };
 wBut.onclick = function(){
-	wMin = bar.value[0]+bar.value[1];
+	wMin = parseInt(bar.value[0]+bar.value[1]);
 	/:/.test(wMin) ? wMin=wMin.split("").reverse().join("").replace(/:/,"0") : wMin;
 	minAct = rMin;
 	revTil.style.transform=rotation;
