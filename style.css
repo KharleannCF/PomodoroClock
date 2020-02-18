@@ -7,6 +7,23 @@
 *{
 	background: hsl(160, 100%, 70%);
 }
+h1{
+	position: absolute;
+	color:pink;
+	font-size: 2.2em;
+	background: none;
+	top:1%;
+	left: 1%;
+}
+h1:before{
+	margin: -5px;
+	padding: 0px;
+	position: absolute;
+	content: "HOLA";
+	font-size: 1.2em;
+	color:blue;
+	z-index: -1;
+}
 
 input{
 	position: relative;
@@ -129,3 +146,26 @@ p{
 #revtitulo{
 	width: 40vw;
 }
+
+
+/* 
+Las plantas requieren diferentes nutrientes para tener un crecimiento apropiado, tres de
+los más importantes nutrientes que proporcionan los fertilizantes son el nitrógeno, el
+
+fósforo y el potasio. Traduzca las siguientes proposiciones en un sistema de reglas de
+producción que permita determinar la deficiencia de los nutrientes de una planta
+tomando en cuenta su aspecto (suponga que el color normal de un planta es verde):
+● Una planta con crecimiento de raíz atrofiado puede tener hojas de color amarillo
+pálido.
+● Una planta de color amarillo pálido puede tener una deficiencia de nitrógeno.
+● Una planta que tiene los bordes de sus hojas café rojizo puede tener una
+deficiencia en nitrógeno.
+● Una planta con crecimiento de raíz atrofiado puede tener deficiencia de fósforo.
+● Una planta con un tallo zanquivano puede tener una deficiencia de fósforo.
+● Una planta de color púrpura puede tener una deficiencia de fósforo.
+● Una planta que tiene maduración retardada puede tener una deficiencia de fósforo.
+● Una planta con los bordes de sus hojas quemados puede tener una deficiencia de
+potasio.
+● Una planta con tallos debilitados puede tener coloración púrpura.
+● Una planta con semillas o frutos secos puede tener una deficiencia de potasio
+*/
