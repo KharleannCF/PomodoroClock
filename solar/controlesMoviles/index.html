@@ -18,17 +18,26 @@
 			margin: 0;
 			padding: 0;
 		}
-			
+		#container{
+			width: 25%;
+			height: 25%;
+			position: absolute;
+			top: 75%;
+			left: 0%;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+
 		#main {
 			align-items: center;
 			display: flex;
-			height: 5%;
 			justify-content: center;
 			margin: auto;
-			width: 5%;
 			position: absolute;
-			top: 90%;
-			left: 10%;
+			width: 50%;
+			height: 50%;
+
 		}
 			
 		#wrapper {
@@ -42,14 +51,10 @@
 		}
 		#main2 {
 			align-items: center;
-			display: flex;
-			height: 5%;
+			display: flex;			
 			justify-content: center;
 			margin: auto;
-			width: 5%;
 			position: absolute;
-			top: 90%;
-			left: 90%;
 		}
 			
 		#wrapper2 {
@@ -76,12 +81,10 @@
     </style>
 </head>
 <body>
-	<div id="main">
-    	<div id="wrapper">
-    	</div>
-    </div>
-    <div id="main2">
-    	<div id="wrapper2">
+	<div id="container">
+		<div id="main">
+    		<div id="wrapper">
+    		</div>
     	</div>
     </div>
 	<canvas id="canvas"></canvas>
