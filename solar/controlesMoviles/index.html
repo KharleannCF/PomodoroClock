@@ -3,73 +3,92 @@
 <head>
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style type="text/css">
-    	html, body {
- 			margin: 0;
-		  }
-    	canvas{
-    		width: 100vw;
-    		height: 100vh;
-    		display: block;
-    	}
+    	
 		* {
 			border: 0;
 			box-sizing: border-box;
 			margin: 0;
 			padding: 0;
 		}
-		.container{
-			width: 30%;
-			height: 30%;
-			position: absolute;
-			align-items: center;
-			display: flex;
-			justify-content: center;
-		}
-		#containerLeft{
-			top: 70%;
-			left: 0%;
-		}
-
-		#containerRight{
-			top: 70%;
-			left: 70%;
-		}
-			
-		.wrapper {
-			align-items: center;
-			display: flex;
-			justify-content: center;
-			border: 1px solid black;
-			border-radius: 100%;
+		canvas{
+    		width: 100vw;
+    		height: 100vh;
+    		display: block;
+    	}
+		
+		.wrapper{
 			margin: auto;
 			position: absolute;
-			width: 50%;
-			height: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items:  stretch;
 		}
-			
-		.joystick {
-			background-color: blue;
-			border-radius: 100%;
-			cursor: pointer;
-			height: 80%;
-			user-select: none;
-			width: 80%;
+		#wrapperLeft{
+			top: 45%;
+			left: 5%;
 		}
-			
+		#wrapperRight{
+			top: 45%;
+			left: 80%;
+		}
 
+		.buttonRow{
+			display: flex;
+			justify-content: space-around;	
+		}
+		button{
+			font-size: 2rem;
+			font-weight: bold;
+			margin-left: 10px;
+			margin-bottom: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+			border: none;
+			background-color: rgba(0.2,0.7,0.9,0.5);
+			color:  rgb(102, 102, 255);
+			text-shadow: 0px 0px 2px #FFFFFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
+		@media only screen and (min-height: 600px){
+			button{
+				display: none;
+			}
+		}
+		
     </style>
+		
 </head>
 <body>
-	<div id="containerLeft" class="container">
-    	<div id="wrapperLeft" class="wrapper">
-    	</div>
-    </div>
-    <div id="containerRight" class="container">
-    		<div id="wrapperRight" class="wrapper">
-    		</div>
-    </div>
+   	<div id="wrapperLeft" class="wrapper">
+   		<div class="buttonRow">
+    		<button id="up">&#8679;</button>
+   		</div>
+   		<div class="buttonRow">
+    		<button id="left">&#8678;</button>
+    		<button id="right">	&#8680;</button>
+   		</div>
+   		<div class="buttonRow">
+    		<button id="down">&#8681;</button>
+   		</div>
+   	</div>
+   	<div id="wrapperRight" class="wrapper">
+   		<div class="buttonRow">
+    		<button id="upRot">&#8679;</button>
+   		</div>
+   		<div class="buttonRow">
+    		<button id="leftRot">&#8678;</button>
+    		<button id="rightRot">	&#8680;</button>
+   		</div>
+   		<div class="buttonRow">
+    		<button id="downRot">&#8681;</button>
+   		</div>
+   	</div>
 	<canvas id="canvas"></canvas>
 	<script type="text/javascript" src="main.js"></script>
 </body>
