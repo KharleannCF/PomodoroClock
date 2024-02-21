@@ -1,0 +1,23 @@
+{
+  "name": "kharleanncf.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reloj.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "serve -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KharleannCF/kharleanncf.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KharleannCF/kharleanncf.github.io/issues"
+  },
+  "homepage": "https://github.com/KharleannCF/kharleanncf.github.io#readme",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
